@@ -5,8 +5,8 @@ import "google/protobuf/timestamp.proto";
 
 // define API
 service ShopService {
-    rpc CreateOrder(CreatOrderRequest) returns (CreateOrderResponse);
-    rpc ListOrder(ListOrderRequest) returns (ListeOrderResponse);
+    rpc CreateOrder(CreateOrderRequest) returns (CreateOrderResponse);
+    rpc ListOrder(ListOrderRequest) returns (ListOrderResponse);
 }
 
 // define Order Model
@@ -14,7 +14,7 @@ message Order {
     enum PayMethod {
         UNKOWN = 0;
         CACHE = 1;
-        CREADIT_CARD = 2;
+        CREDIT_CARD = 2;
         QR_CODE = 3;
     }
 
@@ -25,7 +25,7 @@ message Order {
     google.protobuf.Timestamp at = 5;
 }
 
-message CreatOrderRequest {
+message CreateOrderRequest {
     string product_id = 1;
     Order.PayMethod pay_method = 2;
 }
@@ -38,6 +38,6 @@ message ListOrderRequest {
     string user_name = 1;
 }
 
-message ListeOrderResponse {
+message ListOrderResponse {
     repeated Order orders = 1;
 }

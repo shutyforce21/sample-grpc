@@ -44,14 +44,14 @@ export namespace Order {
   export interface PayMethodMap {
     UNKOWN: 0;
     CACHE: 1;
-    CREADIT_CARD: 2;
+    CREDIT_CARD: 2;
     QR_CODE: 3;
   }
 
   export const PayMethod: PayMethodMap;
 }
 
-export class CreatOrderRequest extends jspb.Message {
+export class CreateOrderRequest extends jspb.Message {
   getProductId(): string;
   setProductId(value: string): void;
 
@@ -59,16 +59,16 @@ export class CreatOrderRequest extends jspb.Message {
   setPayMethod(value: Order.PayMethodMap[keyof Order.PayMethodMap]): void;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): CreatOrderRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: CreatOrderRequest): CreatOrderRequest.AsObject;
+  toObject(includeInstance?: boolean): CreateOrderRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: CreateOrderRequest): CreateOrderRequest.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: CreatOrderRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): CreatOrderRequest;
-  static deserializeBinaryFromReader(message: CreatOrderRequest, reader: jspb.BinaryReader): CreatOrderRequest;
+  static serializeBinaryToWriter(message: CreateOrderRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CreateOrderRequest;
+  static deserializeBinaryFromReader(message: CreateOrderRequest, reader: jspb.BinaryReader): CreateOrderRequest;
 }
 
-export namespace CreatOrderRequest {
+export namespace CreateOrderRequest {
   export type AsObject = {
     productId: string,
     payMethod: Order.PayMethodMap[keyof Order.PayMethodMap],
@@ -117,23 +117,23 @@ export namespace ListOrderRequest {
   }
 }
 
-export class ListeOrderResponse extends jspb.Message {
+export class ListOrderResponse extends jspb.Message {
   clearOrdersList(): void;
   getOrdersList(): Array<Order>;
   setOrdersList(value: Array<Order>): void;
   addOrders(value?: Order, index?: number): Order;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): ListeOrderResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: ListeOrderResponse): ListeOrderResponse.AsObject;
+  toObject(includeInstance?: boolean): ListOrderResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: ListOrderResponse): ListOrderResponse.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: ListeOrderResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): ListeOrderResponse;
-  static deserializeBinaryFromReader(message: ListeOrderResponse, reader: jspb.BinaryReader): ListeOrderResponse;
+  static serializeBinaryToWriter(message: ListOrderResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ListOrderResponse;
+  static deserializeBinaryFromReader(message: ListOrderResponse, reader: jspb.BinaryReader): ListOrderResponse;
 }
 
-export namespace ListeOrderResponse {
+export namespace ListOrderResponse {
   export type AsObject = {
     ordersList: Array<Order.AsObject>,
   }
